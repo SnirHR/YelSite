@@ -149,8 +149,8 @@ public static class Helper
     public static void CreateUser(User user)
     {
         // Create the SQL query to insert the user into the database
-        string query = $"INSERT INTO Users(Username,Email, FirstName, LastName, Gender, Country, Role, EducationalBackground, Language) " +
-                       $"VALUES (Username,'{user.Email}', '{user.FirstName}', '{user.LastName}', '{user.Gender}', '{user.Country}', '{user.Role}', " +
+        string query = $"INSERT INTO Users(Username,Email, FirstName, LastName, Password ,Gender, Country, Role, EducationalBackground, Language) " +
+                       $"VALUES ('{user.Username}','{user.Email}', '{user.FirstName}', '{user.LastName}','{user.Password}', '{user.Gender}', '{user.Country}', '{user.Role}', " +
                        $"'{user.EducationalBackground}', '{user.Language}')";
 
         // Execute the query
