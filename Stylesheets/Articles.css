@@ -1,0 +1,43 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+#roles {
+    display: flex;
+    justify-content: center;
+}
+
+.role {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #008060;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.role:hover {
+        background-color: #00644e;
+        color: #fff;
+}
