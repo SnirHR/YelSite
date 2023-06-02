@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterForm.aspx.cs" Inherits="YelSite.Pages.RegisterForm" MasterPageFile="~/Site.Master" %>
+﻿<%@ Page Language="C#" Title="Register" AutoEventWireup="true" CodeBehind="RegisterForm.aspx.cs" Inherits="YelSite.Pages.RegisterForm" MasterPageFile="~/Site.Master" %>
 
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
@@ -175,8 +175,8 @@
             <option value="IL">Israel</option>
         </select>
 
-        <asp:Button id="registerButton" runat="server" Text="Register" CssClass="btn btn-primary submit" BorderColor="#008060" BackColor="#008060" OnClick="RegisterButton_Click" />
-        <asp:Button ID="resetButton" CssClass="btn btn-primary reset" runat="server" Text="Reset" type="reset" />
+        <asp:Button ID="RegisterButton" runat="server" Text="Register" CssClass="btn btn-primary submit" BorderColor="#008060" BackColor="#008060" OnClick="RegisterButton_Click" />
+        <button class="reset" type="reset">Reset</button>
         <a href="LoginForm.aspx" class="login-toggle">Already have an account?</a>
         <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
     </div>

@@ -69,7 +69,14 @@ button {
     text-decoration: none;
     margin-top: 1rem;
 }
-
+.submit {
+    width: 8rem;
+    height: 2.5rem;
+}
+.reset{
+    width: 5rem;
+    height: 2.5rem;
+}
 /* Media Query for Responsive Design */
 @media screen and (max-width: 768px) {
     input[type="text"],

@@ -16,6 +16,9 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="~/Stylesheets/Articles.css" runat="server" />
     <link rel="stylesheet" type="text/css" href="~/Stylesheets/Login.css" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/Stylesheets/Admin.css" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/Stylesheets/NewMentor.css" runat="server" />
+
 
 
 </head>

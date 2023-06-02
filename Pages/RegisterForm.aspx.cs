@@ -35,10 +35,20 @@ namespace YelSite.Pages
             {
                 if (password == confirmPassword)
                 {
-                    lblError.Text = string.Empty;
-                    User user = new User(username, firstName, lastName, email, password, role, gender, country, language, educationalBackground, birthday);
-                    Helper.CreateUser(user);
-                    Response.Redirect(Page.ResolveClientUrl("./LoginForm"));
+                    if (!Helper.NameExist(username))
+                    {
+                        if (!Helper.EmailExist(email))
+                        {
+                            lblError.Text = string.Empty;
+                            User user = new User(username, firstName, lastName, email, password, role, gender, country, language, educationalBackground, birthday);
+                            Helper.CreateUser(user);
+                            Response.Redirect(Page.ResolveClientUrl("./LoginForm"));
+                            return;
+                        }
+                        lblError.Text = "E-mail is already in use.";
+                        return;
+                    }
+                    lblError.Text = "Username is already taken.";
                     return;
                 }
                 lblError.Text = "Passwords do not match.";

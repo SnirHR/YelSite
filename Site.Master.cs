@@ -12,8 +12,13 @@ namespace YelSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            AdminClick.Visible = false;
             if (Session["Username"] != null && Session["Username"].ToString() != "")
             {
+                if (Session["Role"].ToString() == "Admin")
+                {
+                    AdminClick.Visible = true;
+                }
                 LoginNav.Visible = false;
                 HelloMSG.Visible = true;
                 SignOutClick.Visible = true;

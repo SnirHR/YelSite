@@ -156,11 +156,21 @@ public static class Helper
         // Execute the query
         ExecuteNonQuery(query);
     }
+    public static bool EmailExist(string Email)
+    {
+        string query = $"SELECT *  FROM Users WHERE Email = '{Email}'";
+        DataSet ds = RetrieveTable(query);
+        if (ds.Tables["Users"].Rows.Count > 0)
+        {
+            return true;
+        }
+        return false;
+    }
     public static bool NameExist(string Username)
     {
         string query = $"SELECT *  FROM Users WHERE Username = '{Username}'";
         DataSet ds = RetrieveTable(query);
-        if (ds.Tables["Role"].Rows.Count > 0)
+        if (ds.Tables["Users"].Rows.Count > 0)
         {
             return true;
         }

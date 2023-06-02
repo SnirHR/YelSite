@@ -7,7 +7,7 @@
             <h1 id="PageTitle">Who are we?</h1>
             <p class="lead">YEL(Youth Empowerment League) is an organization dedicated to empowering and supporting young individuals to realize their full potential. It aims to provide guidance, mentorship, and educational opportunities to help youth navigate their personal and professional journeys.</p>
             <p class="d-flex justify-content-center"><a id="read-more-button" href="#read-more" class="btn btn-primary">Read more</a></p>
-            <img src="./Images/Logo.png" />
+            <img src="./Images/YEL.png" />
         </section>
 
         <div class="row d-flex justify-content-center">
