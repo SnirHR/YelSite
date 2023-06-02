@@ -175,7 +175,7 @@
             <option value="IL">Israel</option>
         </select>
 
-        <asp:Button id="registerButton" runat="server" Text="Register" CssClass="btn btn-primary submit" OnClick="RegisterButton_Click" />
+        <asp:Button id="registerButton" runat="server" Text="Register" CssClass="btn btn-primary submit" BorderColor="#008060" BackColor="#008060" OnClick="RegisterButton_Click" />
         <asp:Button ID="resetButton" CssClass="btn btn-primary reset" runat="server" Text="Reset" type="reset" />
         <a href="LoginForm.aspx" class="login-toggle">Already have an account?</a>
         <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>

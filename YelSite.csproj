@@ -106,6 +106,7 @@
     <Content Include="App_Data\Databaseu_log.ldf">
       <DependentUpon>Databaseu.mdf</DependentUpon>
     </Content>
+    <Content Include="Articles\MentorArticles.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -199,6 +200,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\Helper.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Articles\MentorArticles.aspx.cs">
+      <DependentUpon>MentorArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Articles\MentorArticles.aspx.designer.cs">
+      <DependentUpon>MentorArticles.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\User.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -24,6 +24,42 @@ namespace YelSite
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navlogo;
 
         /// <summary>
+        /// AdminClick control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor AdminClick;
+
+        /// <summary>
+        /// LoginNav control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor LoginNav;
+
+        /// <summary>
+        /// HelloMSG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor HelloMSG;
+
+        /// <summary>
+        /// SignOutClick control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton SignOutClick;
+
+        /// <summary>
         /// head control.
         /// </summary>
         /// <remarks>

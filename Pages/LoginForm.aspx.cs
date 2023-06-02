@@ -17,11 +17,14 @@ namespace YelSite.Pages
         {
             if (!string.IsNullOrEmpty(Luser.Value) || !string.IsNullOrEmpty(Lpassword.Value))
             {
-                SignIn(Luser.Value, Lpassword.Value);
-                LlblError.Text = string.Empty;
-                Session["Username"] = Luser.Value;
-                Session["Role"] = Helper.GetRole(Luser.Value);
-                Response.Redirect(Page.ResolveClientUrl("../"));
+                if (SignIn(Luser.Value, Lpassword.Value)) {
+                    LlblError.Text = string.Empty;
+                    Session["Username"] = Luser.Value;
+                    Session["Role"] = Helper.GetRole(Luser.Value);
+                    Response.Redirect(Page.ResolveClientUrl("../"));
+                    return;
+                }
+                LlblError.Text = "Invaild credentials";
                 return;
             }
             LlblError.Text = "All fields are required.";

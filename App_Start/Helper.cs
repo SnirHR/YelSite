@@ -149,8 +149,8 @@ public static class Helper
     public static void CreateUser(User user)
     {
         // Create the SQL query to insert the user into the database
-        string query = $"INSERT INTO Users(Username,Email, FirstName, LastName, Password ,Gender, Country, Role, EducationalBackground, Language) " +
-                       $"VALUES ('{user.Username}','{user.Email}', '{user.FirstName}', '{user.LastName}','{user.Password}', '{user.Gender}', '{user.Country}', '{user.Role}', " +
+        string query = $"INSERT INTO Users(Username,Email, FirstName, LastName, Birthday ,Password ,Gender, Country, Role, EducationalBackground, Language) " +
+                       $"VALUES ('{user.Username}','{user.Email}', '{user.FirstName}', '{user.LastName}','{user.Birthday}','{user.Password}', '{user.Gender}', '{user.Country}', '{user.Role}', " +
                        $"'{user.EducationalBackground}', '{user.Language}')";
 
         // Execute the query
@@ -179,7 +179,7 @@ public static class Helper
     public static bool Login(string user, string password)
     {
         // Build the SQL query to retrieve the user data
-        string query = $"SELECT * FROM Users WHERE User = '{user}'";
+        string query = $"SELECT * FROM Users WHERE Username = '{user}'";
 
         // Retrieve the user data from the database
         DataSet ds = RetrieveTable(query);
@@ -187,18 +187,15 @@ public static class Helper
         // Check if there is a matching user
         if (ds.Tables["Users"].Rows.Count > 0)
         {
-            // Retrieve the stored password for the user
             string storedPassword = ds.Tables["Users"].Rows[0]["Password"].ToString();
 
-            // Verify the password
             if (storedPassword == password)
             {
-                // Valid login credentials
                 return true;
             }
-        }
+            return false;
 
-        // Invalid login credentials
+        }
         return false;
     }
     public static int ExecuteNonQuery(string SQL)
