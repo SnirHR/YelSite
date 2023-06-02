@@ -136,6 +136,7 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\New.png" />
     <Content Include="Images\YEL.png" />
+    <Content Include="Pages\Admin.aspx" />
     <Content Include="Pages\Articles.aspx" />
     <Content Include="Pages\LoginForm.aspx" />
     <Content Include="Pages\RegisterForm.aspx" />
@@ -259,6 +260,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Articles.aspx.cs">
       <DependentUpon>Articles.aspx</DependentUpon>

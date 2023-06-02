@@ -11,7 +11,10 @@ namespace YelSite.Articles
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Username"] == null || Session["Username"].ToString() == "" || (Session["Role"].ToString() != "Student" && Session["Role"].ToString() != "Admin"))
+            {
+                Response.Redirect(Page.ResolveClientUrl("~/"));
+            }
         }
     }
 }

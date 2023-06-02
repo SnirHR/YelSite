@@ -95,7 +95,7 @@ public static class Helper
     public static string BuildUsersTable(DataTable dt)
     // the Method Build HTML user Table with checkBoxes using the users in the DataTable dt.
     {
-
+        int counter = 0;
         string str = "<table class='usersTable' align='center'>";
         str += "<tr>";
         str += "<td> </td>";
@@ -107,12 +107,13 @@ public static class Helper
         foreach (DataRow row in dt.Rows)
         {
             str += "<tr>";
-            str += "<td>" + CreateRadioBtn(row["userId"].ToString()) + "</td>";
+            str += "<td>" + CreateRadioBtn(row[counter].ToString()) + "</td>";
             foreach (DataColumn column in dt.Columns)
             {
                 str += "<td>" + row[column] + "</td>";
             }
             str += "</tr>";
+            counter++;
         }
         str += "</tr>";
         str += "</Table>";
@@ -145,6 +146,42 @@ public static class Helper
         con.Close();
 
         return scalar;
+    }
+    //public static void SortUsers(string columnName, string sortOrder)
+    //{
+    //    // Get the current DataTable containing the users
+    //    DataTable dt = (DataTable)ViewState["Users"];
+
+    //    // Sort the DataTable based on the selected column and order
+    //    dt.DefaultView.Sort = columnName + " " + sortOrder;
+    //    dt = dt.DefaultView.ToTable();
+
+    //    // Update the ViewState with the sorted DataTable
+    //    ViewState["Users"] = dt;
+
+    //    // Rebind the users table to display the sorted data
+    //    BindUsersTable(dt);
+    //}
+    public static DataTable GetDataTable(string Query)
+    {
+        Query = "SELECT * FROM Users"; 
+
+        // Connect to the database
+        SqlConnection con = new SqlConnection(conString);
+
+        // Build the SQL query
+        SqlCommand cmd = new SqlCommand(Query, con);
+
+        // Build the DataAdapter
+        SqlDataAdapter ad = new SqlDataAdapter(cmd);
+
+        // Build the DataTable to store the data
+        DataTable dt = new DataTable();
+
+        // Get the data from the database into the DataTable
+        ad.Fill(dt);
+
+        return dt;
     }
     public static void CreateUser(User user)
     {

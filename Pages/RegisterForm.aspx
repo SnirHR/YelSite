@@ -16,8 +16,8 @@
         <input id="Reducation" placeholder="Enter education experience" type="text" runat="server" />
         <select name="Rrole" class="form-control" id="Rrole" runat="server">
             <option value="" selected disabled>Choose role</option>
-            <option value="M" label="Mentor">Mentor</option>
-            <option value="S" label="Student">Student</option>
+            <option value="Mentor" label="Mentor">Mentor</option>
+            <option value="Student" label="Student">Student</option>
         </select>
         <select id="Rgender" class="form-control" runat="server">
             <option value="" selected disabled>Choose Gender</option>

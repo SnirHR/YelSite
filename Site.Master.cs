@@ -22,12 +22,12 @@ namespace YelSite
                 LoginNav.Visible = false;
                 HelloMSG.Visible = true;
                 SignOutClick.Visible = true;
-                HelloMSG.InnerText += " " + Session["Username"].ToString();
+                HelloMSG.InnerText = "Hello " + Session["Username"].ToString();
             }
             else
             {
                 LoginNav.Visible = true;
-                HelloMSG.Visible = false;
+                HelloMSG.InnerText = "Hello Visitor";
                 SignOutClick.Visible = false;
 
             }
@@ -37,7 +37,7 @@ namespace YelSite
         { //Signout Function
             Session["Username"] = "";
             Session["Role"] = "Visitor";
-            Response.Redirect(Page.ResolveClientUrl("./")); //reloads the page
+            Response.Redirect(Page.ResolveClientUrl("~/")); //reloads the page
         }
     }
 }
