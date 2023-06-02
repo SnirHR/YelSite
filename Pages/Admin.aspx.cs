@@ -52,7 +52,7 @@ namespace YelSite.Pages
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             // Create a list to store the user IDs to delete
-            System.Collections.Generic.List<int> userIdsToDelete = new System.Collections.Generic.List<int>();
+            List<int> userIdsToDelete = new List<int>();
 
             // Loop through the checkbox controls in the user table
             foreach (Control control in usertablecontainer.Controls)
@@ -106,7 +106,7 @@ namespace YelSite.Pages
             }
             foreach (int userId in userIdsToUpdate)
             {
-                string updateQuery = $"UPDATE Users SET Role = 'Student' WHERE userId = {userId}";
+                string updateQuery = $"UPDATE Users SET Role = 'Student' WHERE ID = {userId}";
                 Helper.ExecuteNonQuery(updateQuery);
             }
 
@@ -115,7 +115,6 @@ namespace YelSite.Pages
         }
         protected void btnMentor_Click(object sender, EventArgs e)
         {
-            // Create a list to store the user IDs to update
             List<int> userIdsToUpdate = new List<int>();
 
             // Loop through the checkbox controls in the user table
@@ -136,7 +135,7 @@ namespace YelSite.Pages
             }
             foreach (int userId in userIdsToUpdate)
             {
-                string updateQuery = $"UPDATE Users SET Role = 'Mentor' WHERE userId = {userId}";
+                string updateQuery = $"UPDATE Users SET Role = 'Mentor' WHERE ID = {userId}";
                 Helper.ExecuteNonQuery(updateQuery);
             }
 
@@ -167,7 +166,7 @@ namespace YelSite.Pages
             // Update the selected users in the database to the "Admin" role
             foreach (int userId in userIdsToUpdate)
             {
-                string updateQuery = $"UPDATE Users SET Role = 'Admin' WHERE userId = {userId}";
+                string updateQuery = $"UPDATE Users SET Role = 'Admin' WHERE ID = {userId}";
                 Helper.ExecuteNonQuery(updateQuery);
             }
 
