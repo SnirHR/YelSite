@@ -42,7 +42,7 @@
                     We focus on creating a community of young Bridge players where they can engage in discussions, share their experiences, learn from each other, and foster a sense of camaraderie. We believe that playing Bridge is more enjoyable and rewarding in a supportive community environment.
                 </p>
             </section>
-            <img src="./Images/Logo.png" style="width:auto; height:auto;/>
+            <img src="./Images/Logo.png" style="width:auto; height:auto;"/>
         </div>
     </main>
 
