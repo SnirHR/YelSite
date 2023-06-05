@@ -15,9 +15,9 @@ namespace YelSite.Pages
         }
         protected void Login(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Luser.Value) || !string.IsNullOrEmpty(Lpassword.Value))
+            if ((!string.IsNullOrEmpty(Luser.Value) && !string.IsNullOrEmpty(Lpassword.Value)) && !string.IsNullOrEmpty(Lid.Value))
             {
-                if (SignIn(Luser.Value, Lpassword.Value)) {
+                if (SignIn(Luser.Value,int.Parse(Lid.Value), Lpassword.Value)) {
                     LlblError.Text = string.Empty;
                     Session["Username"] = Luser.Value;
                     Session["Role"] = Helper.GetRole(Luser.Value);
@@ -31,9 +31,9 @@ namespace YelSite.Pages
             return;
         }
 
-        private bool SignIn(string Username, string Password)
+        private bool SignIn(string Username, int id ,string Password)
         {
-            if (Helper.Login(Username, Password) == true)
+            if (Helper.Login(Username,id, Password) == true)
             {
                 return true;
             }

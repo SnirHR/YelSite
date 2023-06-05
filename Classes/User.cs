@@ -18,19 +18,23 @@ namespace YelSite.Classes
         public string Country { get; set; }
         public string Language { get; set; }
         public string EducationalBackground { get; set; }
+        public string Phone { get; set; }
+
         public string Birthday { get; set; }
-        public User(string username,string firstName, string lastName, string email, string password, string role, string gender, string country, string language, string EducationalBackground, string birthday)
+        public User(string username,string firstName, string lastName, string email, string password,int id, string role, string gender, string country, string language, string educationalBackground,string phone, string birthday)
         {
             this.Username = username;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Email = email;
             this.Password = password;
+            this.Id = id;
             this.Role = role;
             this.Gender = gender;
             this.Country = country;
             this.Language = language;
-            this.EducationalBackground = EducationalBackground;
+            this.EducationalBackground = educationalBackground;
+            this.Phone = phone;
             this.Birthday = birthday;
         }
     }

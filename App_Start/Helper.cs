@@ -8,7 +8,7 @@ using YelSite.Classes;
 
 public static class Helper
 {
-    public const string DBName = "Databaseu.mdf";   //Name of the MSSQL Database.
+    public const string DBName = "Database.mdf";   //Name of the MSSQL Database.
     public const string tblName = "Users";      // Name of the user Table in the Database
     public const string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\" 
                                     + DBName + ";Integrated Security=True";   // The Data Base is in the App_Data = |DataDirectory|
@@ -88,8 +88,27 @@ public static class Helper
         adapter.UpdateCommand = builder.GetDeleteCommand();
         adapter.Update(ds, tblName);
     }
-
-    
+    public static int CountUsers()
+    {
+        string query = "SELECT COUNT(*) FROM Users";
+        DataSet ds = RetrieveTable(query);
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            int count = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+            return count;
+        }
+        return 0;
+    }
+    public static string GetField(string username,string field)
+    {
+            string query = $"SELECT * FROM Users WHERE Username = '{username}'";
+            DataSet ds = RetrieveTable(query);
+            if (ds.Tables["Users"].Rows.Count > 0)
+            {
+                return ds.Tables["Users"].Rows[0][field].ToString();
+            }
+            return "";
+    }
 
 
     public static string BuildUsersTable(DataTable dt)
@@ -186,9 +205,9 @@ public static class Helper
     public static void CreateUser(User user)
     {
         // Create the SQL query to insert the user into the database
-        string query = $"INSERT INTO Users(Username,Email, FirstName, LastName, Birthday ,Password ,Gender, Country, Role, EducationalBackground, Language) " +
-                       $"VALUES ('{user.Username}','{user.Email}', '{user.FirstName}', '{user.LastName}','{user.Birthday}','{user.Password}', '{user.Gender}', '{user.Country}', '{user.Role}', " +
-                       $"'{user.EducationalBackground}', '{user.Language}')";
+        string query = $"INSERT INTO Users(Username,Email, FirstName, LastName,IdTag, Birthday ,Password ,Gender, Country, Role, EducationalBackground, Phone, Language) " +
+                       $"VALUES ('{user.Username}','{user.Email}', '{user.FirstName}', '{user.LastName}','{user.Id}','{user.Birthday}','{user.Password}', '{user.Gender}', '{user.Country}', '{user.Role}', " +
+                       $"'{user.EducationalBackground}','{user.Phone}' ,'{user.Language}')";
 
         // Execute the query
         ExecuteNonQuery(query);
@@ -213,6 +232,11 @@ public static class Helper
         }
         return false;
     }
+    public static void SetPassword(string username,string password)
+    {
+        string query = $"UPDATE Users SET Password = '{password}' WHERE Username = '{username}'";
+        ExecuteNonQuery(query);
+    }
     public static string GetRole(string Username)
     {
         string query = $"SELECT * FROM Users WHERE Username = '{Username}'";
@@ -222,6 +246,30 @@ public static class Helper
             return ds.Tables["Users"].Rows[0]["Role"].ToString();
         }
         return "Visitor";
+    }
+    public static bool Login(string user, int id ,string password)
+    {
+        // Build the SQL query to retrieve the user data
+        string query = $"SELECT * FROM Users WHERE Username = '{user}'";
+
+        // Retrieve the user data from the database
+        DataSet ds = RetrieveTable(query);
+
+        // Check if there is a matching user
+        if (ds.Tables["Users"].Rows.Count > 0)
+        {
+            string storedPassword = ds.Tables["Users"].Rows[0]["Password"].ToString();
+            int storedID = int.Parse(ds.Tables["Users"].Rows[0]["IdTag"].ToString());
+            if (storedID == id)
+            {
+                if (storedPassword == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        return false;
     }
     public static bool Login(string user, string password)
     {

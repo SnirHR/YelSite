@@ -19,8 +19,8 @@ namespace YelSite
                 {
                     AdminClick.Visible = true;
                 }
+                proflieNav.Visible = true;
                 LoginNav.Visible = false;
-                HelloMSG.Visible = true;
                 SignOutClick.Visible = true;
                 HelloMSG.InnerText = "Hello " + Session["Username"].ToString();
             }
@@ -29,6 +29,7 @@ namespace YelSite
                 LoginNav.Visible = true;
                 HelloMSG.InnerText = "Hello Visitor";
                 SignOutClick.Visible = false;
+                proflieNav.Visible = false;
 
             }
         }

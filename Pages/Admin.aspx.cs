@@ -17,7 +17,7 @@ namespace YelSite.Pages
             {
                 Response.Redirect(Page.ResolveClientUrl("../"));
             }
-
+            lblCounter.InnerText += $"{Helper.CountUsers().ToString()} users registered!";
             BindUserTable();
 
         }

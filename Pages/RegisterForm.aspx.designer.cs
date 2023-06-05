@@ -15,6 +15,15 @@ namespace YelSite.Pages
     {
 
         /// <summary>
+        /// Rid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Rid;
+
+        /// <summary>
         /// Ruser control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace YelSite.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Reducation;
+
+        /// <summary>
+        /// Rphone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Rphone;
 
         /// <summary>
         /// Rrole control.

@@ -27,11 +27,13 @@ namespace YelSite.Pages
             string country = Rcountry.Value;
             string language = Rlanguage.Value;
             string educationalBackground = Reducation.Value;
+            string phone = Rphone.Value;
             string birthday = Rbirthday.Value;
+            int Id = int.Parse(Rid.Value);
 
-            if (!string.IsNullOrEmpty(email) || !string.IsNullOrEmpty(firstName) || !string.IsNullOrEmpty(lastName) ||
-                !string.IsNullOrEmpty(password) || !string.IsNullOrEmpty(confirmPassword) || !string.IsNullOrEmpty(role) ||
-                !string.IsNullOrEmpty(gender))
+            if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName) &&
+                !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(confirmPassword) && !string.IsNullOrEmpty(role) &&
+                !string.IsNullOrEmpty(gender) && !string.IsNullOrEmpty(phone))
             {
                 if (password == confirmPassword)
                 {
@@ -39,10 +41,15 @@ namespace YelSite.Pages
                     {
                         if (!Helper.EmailExist(email))
                         {
-                            lblError.Text = string.Empty;
-                            User user = new User(username, firstName, lastName, email, password, role, gender, country, language, educationalBackground, birthday);
-                            Helper.CreateUser(user);
-                            Response.Redirect(Page.ResolveClientUrl("./LoginForm"));
+                            if (!(password.Length < 8))
+                            {
+                                lblError.Text = string.Empty;
+                                User user = new User(username, firstName, lastName, email, password,Id, role, gender, country, language, educationalBackground,phone, birthday);
+                                Helper.CreateUser(user);
+                                Response.Redirect(Page.ResolveClientUrl("./LoginForm"));
+                                return;
+                            }
+                            lblError.Text = "Password must contain atleast 8 characters";
                             return;
                         }
                         lblError.Text = "E-mail is already in use.";

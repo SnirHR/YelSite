@@ -7,83 +7,83 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YelSite
+namespace YelSite.Pages
 {
 
 
-    public partial class SiteMaster
+    public partial class ProfilePage
     {
 
         /// <summary>
-        /// navlogo control.
+        /// lblUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor navlogo;
+        protected global::System.Web.UI.WebControls.Label lblUsername;
 
         /// <summary>
-        /// AdminClick control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor AdminClick;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// LoginNav control.
+        /// lblFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor LoginNav;
+        protected global::System.Web.UI.WebControls.Label lblFirstName;
 
         /// <summary>
-        /// HelloMSG control.
+        /// lblLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor HelloMSG;
+        protected global::System.Web.UI.WebControls.Label lblLastName;
 
         /// <summary>
-        /// proflieNav control.
+        /// lblIdTag control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor proflieNav;
+        protected global::System.Web.UI.WebControls.Label lblIdTag;
 
         /// <summary>
-        /// SignOutClick control.
+        /// lblBirthday control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton SignOutClick;
+        protected global::System.Web.UI.WebControls.Label lblBirthday;
 
         /// <summary>
-        /// head control.
+        /// lblEducationalBackground control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lblEducationalBackground;
 
         /// <summary>
-        /// MainContent control.
+        /// lblRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label lblRole;
     }
 }

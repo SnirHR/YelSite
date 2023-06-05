@@ -11,52 +11,43 @@ namespace YelSite.Pages
 {
 
 
-    public partial class LoginForm
+    public partial class ChangePassword
     {
 
         /// <summary>
-        /// Luser control.
+        /// oldPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Luser;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword oldPassword;
 
         /// <summary>
-        /// Lpassword control.
+        /// newPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword Lpassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword newPassword;
 
         /// <summary>
-        /// Lid control.
+        /// ChangeButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Lid;
+        protected global::System.Web.UI.WebControls.Button ChangeButton;
 
         /// <summary>
-        /// LoginButton control.
+        /// ClblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
-
-        /// <summary>
-        /// LlblError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LlblError;
+        protected global::System.Web.UI.WebControls.Label ClblError;
     }
 }

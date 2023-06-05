@@ -15,13 +15,13 @@ namespace YelSite.Pages
     {
 
         /// <summary>
-        /// usertablecontainer control.
+        /// lblCounter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usertablecontainer;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCounter;
 
         /// <summary>
         /// filter control.
@@ -31,6 +31,15 @@ namespace YelSite.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText filter;
+
+        /// <summary>
+        /// usertablecontainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usertablecontainer;
 
         /// <summary>
         /// btnFilter control.
@@ -85,6 +94,24 @@ namespace YelSite.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnStudent;
+
+        /// <summary>
+        /// Columns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect Columns;
+
+        /// <summary>
+        /// btnSort control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSort;
 
         /// <summary>
         /// message control.

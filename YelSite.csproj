@@ -102,9 +102,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Databaseu.mdf" />
-    <Content Include="App_Data\Databaseu_log.ldf">
-      <DependentUpon>Databaseu.mdf</DependentUpon>
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Articles\ExperiencedMentor.aspx" />
     <Content Include="Articles\ExperiencedStudent.aspx" />
@@ -138,7 +138,11 @@
     <Content Include="Images\YEL.png" />
     <Content Include="Pages\Admin.aspx" />
     <Content Include="Pages\Articles.aspx" />
+    <Content Include="Pages\ChangePassword.aspx" />
+    <Content Include="Pages\Login.js" />
     <Content Include="Pages\LoginForm.aspx" />
+    <Content Include="Pages\ProfilePage.aspx" />
+    <Content Include="Pages\Register.js" />
     <Content Include="Pages\RegisterForm.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -200,6 +204,7 @@
     <Content Include="Stylesheets\Articles.css" />
     <Content Include="Stylesheets\Login.css" />
     <Content Include="Stylesheets\NewMentor.css" />
+    <Content Include="Stylesheets\Profile.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -275,12 +280,26 @@
     <Compile Include="Pages\Articles.aspx.designer.cs">
       <DependentUpon>Articles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LoginForm.aspx.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\LoginForm.aspx.designer.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfilePage.aspx.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProfilePage.aspx.designer.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegisterForm.aspx.cs">
       <DependentUpon>RegisterForm.aspx</DependentUpon>
