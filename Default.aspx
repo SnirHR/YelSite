@@ -5,52 +5,44 @@
      <main>
         <section class="row" aria-labelledby="aspnetTitle">
             <h1 id="PageTitle">Who are we?</h1>
-            <p class="lead">YEL(Youth Empowerment League) is an organization dedicated to empowering and supporting young individuals to realize their full potential. It aims to provide guidance, mentorship, and educational opportunities to help youth navigate their personal and professional journeys.</p>
+            <p class="lead">Hi, I am Yonatan, and I founded BridgeWise, an organization dedicated to empowering and supporting young individuals to realize their full potential in the bridge game. It aims to provide guidance, mentorship, and educational opportunities to help youth navigate their professional journeys in this amazing game.</p>
             <p class="d-flex justify-content-center"><a id="read-more-button" href="#read-more" class="btn btn-primary">Read more</a></p>
-            <img src="./Images/YEL.png" />
+            <img src="./Images/Yonatan.jpeg"/>
         </section>
 
         <div class="row d-flex justify-content-center">
             <section>
-                <h2 class="fw-bold d-flex justify-content-center" id="read-more">Features:</h2>
+                <h2 class="fw-bold d-flex justify-content-center" id="read-more">Our Initiatives:</h2>
                 <p>
-                    <i class="fw-bold d-flex justify-content-center" >Mentorship Program:</i>
+                    <i class="fw-bold d-flex justify-content-center" >Bridge Mentorship Program:</i>
                     <br />
-                    The organization facilitates a mentorship program connecting experienced adults with young mentees.
-                    Mentors provide guidance, advice, and support in areas such as education, career, personal growth, and decision-making.
-                    Mentees have the opportunity to learn from mentors' experiences and gain valuable insights.
-                    
+                    We believe in the power of mentorship. Our mentorship program pairs seasoned Bridge players with young enthusiasts. The mentors provide valuable insights, share strategies, and help mentees understand the nuances of the game.
                 </p>
-                <p>
-                    <i class="fw-bold d-flex justify-content-center">Skill-Building Workshops:</i>
+            <p>
+                    <i class="fw-bold d-flex justify-content-center">Bridge Workshops:</i>
                     <br />
-                    The organization organizes workshops focused on developing essential life skills and empowering youth.
-                    Workshops cover various topics such as leadership, communication, goal setting, time management, and financial literacy.
-                    Experts and professionals are invited to conduct interactive sessions and share practical knowledge.
-
+                    We organize regular workshops to provide hands-on experience and in-depth understanding of Bridge. These workshops cover various aspects of the game, including bidding strategies, defensive techniques, and declarer play tactics.
+            
                 </p>
                 <p >
                     <i class="fw-bold d-flex justify-content-center">Educational Resources:</i>
                     <br />
-                    The platform offers a repository of educational resources, including articles, videos, and e-books, tailored to the needs and interests of young individuals.
-                    Resources cover academic success, study skills, college and career planning, scholarships, and personal development.
-
+                    We offer a wide range of educational resources for young Bridge players. From tutorials, eBooks, articles, to videos – we have a plethora of content to assist learners at different stages of their Bridge journey.
+            
                 </p>
                 <P>
-                    <i class="fw-bold d-flex justify-content-center">Career Exploration:</i>
+                    <i class="fw-bold d-flex justify-content-center">Bridge Competitions:</i>
                     <br />
-                    The organization provides opportunities for young individuals to explore different career paths and gain insights into various industries.
-                    Career panels, guest speakers, and networking events connect youth with professionals from different fields.
-                    Job shadowing or internships may be arranged to offer hands-on experience and exposure to real-world work environments.
+                    We organize regular Bridge competitions to provide a platform for young players to test their skills, learn from their peers, and gain exposure to competitive Bridge playing. These competitions not only boost their confidence but also inspire them to constantly improve.
+            
                 </P>
                 <p>
-                    <i class="fw-bold d-flex justify-content-center">Leadership Development:</i>
+                    <i class="fw-bold d-flex justify-content-center">Community Building:</i>
                     <br />
-                    The organization focuses on developing leadership skills among young individuals.
-                    Leadership training programs, seminars, and conferences are organized to enhance communication, decision-making, teamwork, and problem-solving abilities.
-                    Opportunities for youth to lead and organize community service projects or youth-led initiatives are provided.
+                    We focus on creating a community of young Bridge players where they can engage in discussions, share their experiences, learn from each other, and foster a sense of camaraderie. We believe that playing Bridge is more enjoyable and rewarding in a supportive community environment.
                 </p>
             </section>
+            <img src="./Images/Logo.png" style="width:auto; height:auto;/>
         </div>
     </main>
 

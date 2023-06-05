@@ -13,5 +13,19 @@ namespace YelSite.Articles
 
     public partial class NewMentor
     {
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new YelSite.SiteMaster Master
+        {
+            get
+            {
+                return ((YelSite.SiteMaster)(base.Master));
+            }
+        }
     }
 }
