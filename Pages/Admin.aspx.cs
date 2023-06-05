@@ -11,15 +11,27 @@ namespace YelSite.Pages
 {
     public partial class Admin : System.Web.UI.Page
     {
+        private bool Loaded = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Username"] == null || Session["Username"].ToString() == "" || Session["Role"].ToString() != "Admin")
             {
                 Response.Redirect(Page.ResolveClientUrl("../"));
             }
-            lblCounter.InnerText += $"{Helper.CountUsers().ToString()} users registered!";
-            BindUserTable();
 
+            if (Loaded != true)
+            {
+                lblCounter.InnerText += $"{Helper.CountUsers().ToString()} users registered!";
+            }
+
+            Loaded = true;
+            BindUserTable();
+        }
+        protected void BindUserTable(DataTable dt)
+        {
+            string tableHtml = Helper.BuildUsersTable(dt);
+
+            usertablecontainer.InnerHtml = tableHtml;
         }
         protected void BindUserTable()
         {
@@ -32,6 +44,26 @@ namespace YelSite.Pages
 
             // Display the table on the page
             usertablecontainer.InnerHtml = tableHtml;
+        }
+
+        protected void BtnSort_Click(object sender, EventArgs e)
+        {
+            SortUsers(Columns.Value,order.Value);
+        }
+        protected void SortUsers(string columnName, string sortOrder)
+        {
+            // Get the current DataTable containing the users
+            DataTable dt = (DataTable)ViewState["Users"];
+
+            // Sort the DataTable based on the selected column and order
+            dt.DefaultView.Sort = columnName + " " + sortOrder;
+            dt = dt.DefaultView.ToTable();
+
+            // Update the ViewState with the sorted DataTable
+            ViewState["Users"] = dt;
+
+            // Rebind the users table to display the sorted data
+            BindUserTable(dt);
         }
         protected void btnFilter_Click(object sender, EventArgs e)
         {

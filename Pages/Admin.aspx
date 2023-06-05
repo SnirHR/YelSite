@@ -32,10 +32,11 @@
             <option value="EducationalBackground">EducationalBackground</option>
             <option value="Country">Country</option>
         </select>
-        <input type="radio" id="ASC" name="order" value="ASC" checked/>
-        <label for="ASC">ASC</label>
-        <input type="radio" id="DESC" name="order" value="DESC" />
-        <label for="DESC">DESC</label><br /><br />
+        <select id="order" runat="server">
+            <option value="ASC">ASC</option>
+            <option value="DESC">DESC</option>
+        </select>
+        <br/>
         <asp:Button ID="btnSort" runat="server" Text="Sort" OnClick="BtnSort_Click" />
         <br /><br />
     </div>
