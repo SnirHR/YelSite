@@ -18,6 +18,3 @@ Working on this project allowed us to delve deep into the workings of ASP.NET an
 
 ## Getting Started
 Clone the repo and install the necessary .NET Core packages. Detailed instructions will be provided soon.
-
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
