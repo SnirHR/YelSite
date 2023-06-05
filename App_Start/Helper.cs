@@ -166,21 +166,7 @@ public static class Helper
 
         return scalar;
     }
-    //public static void SortUsers(string columnName, string sortOrder)
-    //{
-    //    // Get the current DataTable containing the users
-    //    DataTable dt = (DataTable)ViewState["Users"];
 
-    //    // Sort the DataTable based on the selected column and order
-    //    dt.DefaultView.Sort = columnName + " " + sortOrder;
-    //    dt = dt.DefaultView.ToTable();
-
-    //    // Update the ViewState with the sorted DataTable
-    //    ViewState["Users"] = dt;
-
-    //    // Rebind the users table to display the sorted data
-    //    BindUsersTable(dt);
-    //}
     public static DataTable GetDataTable(string Query)
     {
         Query = "SELECT * FROM Users"; 
