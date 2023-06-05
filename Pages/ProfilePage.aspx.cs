@@ -13,7 +13,7 @@ namespace YelSite.Pages
         {
             if (Session["Username"] == null || Session["Username"].ToString() == "")
             {
-                Response.Redirect(Page.ResolveClientUrl("~/"));
+                Response.Redirect(Page.ResolveClientUrl("../"));
             }
             string username = Session["username"].ToString();
             lblUsername.Text = username;
@@ -24,8 +24,18 @@ namespace YelSite.Pages
             lblBirthday.Text = Helper.GetField(username, "Birthday");
             lblEducationalBackground.Text = Helper.GetField(username, "EducationalBackground");
             lblRole.Text = Helper.GetRole(username);
+        }
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            Helper.DeleteUser(Session["username"].ToString());
+            this.SignOut();
+        }
 
-
+        protected void SignOut()
+        { 
+            Session["Username"] = "";
+            Session["Role"] = "Visitor";
+            Response.Redirect(Page.ResolveClientUrl("../"));
         }
     }
 }

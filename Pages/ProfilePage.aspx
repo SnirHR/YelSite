@@ -2,9 +2,9 @@
 
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
+    <link rel="stylesheet" type="text/css"  href="~/Stylesheets/Profile.css" runat="server"/>
     <div class="logo-container">
         <a href="../" class="logo"></a>
-        <link type="text/css" rel="stylesheet" href="../Stylesheets/Profile.css" runat="server" />
     </div>
      <div>
             <h2 class="title">Profile Information</h2>
@@ -47,5 +47,6 @@
                 </tr>
             </table>
             <br />
+        <asp:Button ID="DeleteButton" runat="server" Text="DELETE USER" ForeColor="White" BorderColor="#800000" BackColor="#800000" OnClick="DeleteButton_Click" />
         </div>
 </asp:Content>

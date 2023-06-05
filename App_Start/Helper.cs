@@ -212,6 +212,12 @@ public static class Helper
         // Execute the query
         ExecuteNonQuery(query);
     }
+    public static void DeleteUser(string username)
+    {
+        string query = $"DELETE FROM Users WHERE Username = '{username}'";
+        ExecuteNonQuery(query);
+    }
+
     public static bool EmailExist(string Email)
     {
         string query = $"SELECT *  FROM Users WHERE Email = '{Email}'";
